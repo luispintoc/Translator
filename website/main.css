@@ -1,0 +1,150 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+	overflow: visible;
+    background-color: whitesmoke;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+
+h1{
+	font-size: 42px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+h2{
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 0.5rem;
+    margin-right: 0.8rem;
+}
+
+h3{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+    /* margin: rem; */
+    }
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+@media screen and (max-width: 1250px) {
+    .column {
+        float:center;
+        width: 100%;
+    }
+  }
+
+/* Rounded boxes */
+.form-rounded {
+    width: 90%;
+    border-radius: 1rem;
+    }
+
+
+.div-translator {
+    width: auto;
+    border-radius: 0.2rem;
+    padding: 2rem;
+}
+
+textarea {
+    max-width:  100%;
+    resize: None;
+    padding: 1em;
+    font-size: 20px;
+ }
+
+.button {
+    border: solid 0px whitesmoke;
+    border-radius: 8px;
+    font-size: 20px;
+    color: black;
+    padding: 5px 18px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+/* blog */
+#translator {
+    background-color: rgba(88, 121, 136, 0.185);
+    width: auto;
+    border-radius: 0.2rem;
+    padding: 2rem;
+}
+
+/* blog */
+#blog {
+    background-color: white;
+    position:relative;
+    margin: 0;
+    text-align: center;
+    padding: 4em 0 1em 0;
+    box-shadow: inset 0 0 0 1px #7473731f;
+}
+
+
+/* Footer */
+
+#footer {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    padding: 4em 0 1em 0;
+    /* box-shadow: inset 0 0 0 1px #d6d6d6; */
+}
+
+    .fa {
+        padding: 15px;
+        margin:10px;
+        font-size: 25px;
+        width: 25px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+      }
+      
+    .fa:hover {
+        opacity: 0.7;
+      }
+
+    .fa-globe{
+        background: #ffffff;
+        color: rgba(0, 0, 0, 0.39);
+    }
+
+    .fa-github{
+        background: #ffffff;
+        color: rgba(0, 0, 0, 0.39);
+    }
+
+    .fa-linkedin{
+        background: #ffffff;
+        color: rgba(0, 0, 0, 0.39);
+    }
+
+    .circle-icon {
+        /* background: #ffc0c0; */
+        border: 1px solid rgb(173, 173, 173);
+        padding:15px;
+        border-radius: 50%;
+    }

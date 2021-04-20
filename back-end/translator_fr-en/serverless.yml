@@ -1,0 +1,53 @@
+service: translator-fr-en
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: ca-central-1
+  timeout: 180
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - s3:getObject
+      Resource: arn:aws:s3:::bucket-name/*
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+    zip: true
+    slim: true
+    strip: false
+    noDeploy:
+      - docutils
+      - jmespath
+      - pip
+      - python-dateutil
+      - setuptools
+      - six
+      - tensorboard
+    useStaticCache: true
+    useDownloadCache: true
+    cacheLocation: "./cache"
+package:
+  individually: false
+  exclude:
+    - package.json
+    - package-lock.json
+    - node_modules/**
+    - cache/**
+    - test/model/*
+
+
+functions:
+  predict_answer:
+    handler: handler.translate
+    memorySize: 3008
+    timeout: 180
+    events:
+      - http:
+          path: ask
+          method: post
+          cors: true
+
+plugins:
+  - serverless-python-requirements

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<!-- Favicon -->
+<link rel="icon" href="faviconVN.ico" type="image/x-icon">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <head>
+        <title>Luis Pinto's Translator</title>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+
+    <body>
+
+        <!-- Translator -->
+        <h1>Translator</h1>
+
+        <!-- Translator -->
+        <section id="translator">
+
+            <div class="row">
+                <div class="column">
+                    <h2>
+                    <form action="/action_page.php">
+                        <label for="src label">From:</label>
+                        <select id="src">
+                          <option selected value="en">English</option>
+                          <option value="fr">French</option>
+                          <option value="es">Spanish</option>
+                        </select>
+                      </form>
+                    </h2>  
+                    <textarea id="text" type="text" oninput="countWord()" class="form-control form-rounded" rows="10" placeholder="Please write here"></textarea>
+                    <p style="text-align:right; margin-right:1rem; margin-top:-0.2rem;" ><span id="show">0</span>/300</p>
+                </div>
+                <div class="column">
+                    <h2>
+                    <form action="/action_page.php">
+                        <label for="trg label">To:</label>
+                        <select id="trg">
+                            <option value="en">English</option>
+                            <option selected value="fr">French</option>
+                            <option value="es">Spanish</option>
+                        </select>
+                        </form>
+                        </h2> 
+                    <textarea id="translated-text" class="form-control form-rounded" rows="10" readonly=True></textarea>
+                </div>
+            </div>
+
+            </br>
+            </br>
+
+            <div class="row">
+            <button id="button" class="button" type="button" style="float: center">Translate</button>
+            <img id="loadingDiv" src="images/loading_ball.gif" loading="eager" width="60" height="33" style="float:right; margin-left:2.5rem; margin-top:-2.2rem"/>
+            </div>
+            <div id="noteDiv"><p>Note: It might take up to 30 seconds to translate for the first time due to AWS server's cold start. Please wait.</p></div>
+        </section>
+
+        <!-- Blog post -->
+        </br>
+        </br>
+        <section id="blog">
+            <h3>
+                About this project
+            </h3>
+            <p>
+                Under construction
+            </p>
+
+            <img id="construction" src="images/construction.jpg" loading="eager" width="70%" height="70%" style="float:center"/>
+
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <a href="https://luispintoc.github.io/" target="_blank" class="fa fa-globe circle-icon"></a>
+            <a href="https://github.com/luispintoc" target="_blank" class="fa fa-github circle-icon"></a>
+            <a href="https://www.linkedin.com/in/luis-pinto-145760103/" target="_blank" class="fa fa-linkedin circle-icon"></a>
+        </section>
+
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
